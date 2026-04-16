@@ -23,13 +23,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'gradlew.bat clean build --no-daemon'
+                bat 'gradle clean build --no-daemon'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'gradlew.bat test --no-daemon'
+                bat 'gradle test --no-daemon'
             }
         }
 
