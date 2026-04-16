@@ -1,5 +1,5 @@
 pipeline {
-        agent {any}
+        agent any
 
 
     environment {// change the below to your jdk path
