@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17.0.18+8"
+    environment {// change the below to your jdk path
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-25.0.2+10"
         PATH = "${JAVA_HOME}\\bin;${env.PATH}"
     }
 
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
+        stage('Checkout') { //change the below path to your repositoy url
             steps {
                 git branch: 'master', url: 'https://github.com/nawaf83/hello-world-java-6.git'
             }
