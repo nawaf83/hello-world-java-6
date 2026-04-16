@@ -1,8 +1,6 @@
 pipeline {
-        agent {
-        any
-        }
-    }
+        agent {any}
+
 
     environment {// change the below to your jdk path
         JAVA_HOME = "C:\\Program Files\\Java\\jdk-25.0.2+10"
