@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = "C:\\Program Files\\Java\\jdk-1.8"
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17.0.18+8"
         PATH = "${JAVA_HOME}\\bin;${env.PATH}"
     }
 
@@ -18,13 +18,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/nawaf83/hello-world-java-6.git'
-            }
-        }
-
-        stage('Fix Gradle Wrapper Permission') {
-            steps {
-                // Ensure gradlew works on all machines
-                bat 'if exist gradlew.bat (echo Gradle wrapper exists)'
             }
         }
 
