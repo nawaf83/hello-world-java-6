@@ -1,9 +1,9 @@
 pipeline {
-    agent {
-        dockerContainer {
-            image 'gradle:8.5-jdk17'
-        }
+agent {
+    docker {
+        image 'gradle:8.5-jdk17'
     }
+}
 
     environment {// change the below to your jdk path
         JAVA_HOME = "C:\\Program Files\\Java\\jdk-25.0.2+10"
@@ -11,13 +11,6 @@ pipeline {
     }
 
     stages {
-        stage('Check Container') {
-            steps {
-                sh 'echo "Container started..."'
-                sh 'java -version'
-                sh 'gradle -v'
-            }
-        }        
 
         stage('Verify Environment') {
             steps {
